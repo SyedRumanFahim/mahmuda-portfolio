@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahmuda Ferdus | SQA Engineer</title>
+  <meta name="description" content="Portfolio of Mahmuda Ferdus — SQA Engineer specializing in manual & automation testing, API & performance testing, and Agile collaboration." />
+  <meta property="og:title" content="Mahmuda Ferdus | SQA Engineer" />
+  <meta property="og:description" content="SQA portfolio with projects, experience timeline, and skills visualization." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --surface: #111a2e;
+      --elev: #0f1930;
+      --text: #e6ebf5;
+      --muted: #9aa6c3;
+      --line: #223152;
+      --accent: #6d5efc; /* indigo-violet */
+      --accent2: #2dd4bf; /* teal */
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 14px;
+      --radius-sm: 10px;
+      --ring: 0 0 0 3px rgba(109,94,252,.35);
+    }
+    /* Light theme */
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --elev: #f1f5f9;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --ring: 0 0 0 3px rgba(45,212,191,.35);
+    }
+
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(45,212,191,.08), transparent),
+                  radial-gradient(1000px 600px at 0% 10%, rgba(109,94,252,.12), transparent),
+                  var(--bg);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 16px; top: 16px; background: var(--surface); color: var(--text); padding: 10px 14px; border-radius: 10px; box-shadow: var(--shadow); }
+    header {
+      position: sticky; top: 0; z-index: 60;
+      backdrop-filter: saturate(160%) blur(10px);
+      background: linear-gradient(180deg, rgba(11,18,32,.8), rgba(11,18,32,.6));
+      border-bottom: 1px solid var(--line);
+    }
+    [data-theme="light"] header { background: rgba(255,255,255,.7); }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white; font-family: Sora, Inter; font-weight: 700; letter-spacing: .5px;
+    }
+    .title small { color: var(--muted); display: block; margin-top: -4px; font-size: 12px; }
+    nav ul { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }
+    nav a {
+      padding: 8px 12px; border-radius: 10px; color: var(--muted); font-weight: 500;
+    }
+    nav a.active, nav a:hover { color: var(--text); background: rgba(109,94,252,.15); }
+    .actions { display: flex; align-items: center; gap: 10px; }
+    .btn, button.btn {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--line);
+      background: var(--surface); color: var(--text); cursor: pointer;
+      box-shadow: var(--shadow); transition: transform .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2)); border-color: transparent;
+      color: #fff;
+    }
+    .icon { width: 18px; height: 18px; display:inline-block; }
+
+    /* Hero */
+    .hero { padding: 72px 0 32px; }
+    .hero-wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; }
+    @media (max-width: 900px) { .hero-wrap { grid-template-columns: 1fr; } }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--surface);
+      border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .hero .intro { padding: 28px; }
+    .eyebrow { color: var(--muted); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
+    h1 { margin: 8px 0 12px; font-family: Sora, Inter; font-size: 40px; line-height: 1.2; }
+    .subtitle { color: var(--muted); font-size: 16px; margin-bottom: 20px; }
+    .contact-quick { display:flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 6px; }
+    .chip {
+      display:inline-flex; align-items:center; gap:8px; padding: 8px 12px; border: 1px dashed var(--line);
+      border-radius: 999px; color: var(--text); background: rgba(109,94,252,.08);
+    }
+    .chip:hover { background: rgba(45,212,191,.12); }
+    .hero-cta { display:flex; gap:10px; margin-top: 16px; flex-wrap: wrap; }
+
+    .objective { padding: 22px 28px; }
+    .objective p { margin: 0; font-size: 15px; color: var(--text); }
+    .objective strong { color: var(--accent2); }
+
+    /* Sections */
+    section { padding: 44px 0; scroll-margin-top: 90px; }
+    .section-head { display:flex; align-items:end; justify-content: space-between; margin-bottom: 16px; }
+    .section-head h2 { font-family: Sora, Inter; margin: 0; font-size: 24px; }
+    .section-head p { color: var(--muted); margin: 0; font-size: 14px; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 26px; }
+    .timeline::before {
+      content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--accent), var(--accent2));
+      opacity: .6;
+    }
+    .tl-item { position: relative; padding: 18px 18px 18px 20px; margin: 12px 0; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); box-shadow: var(--shadow); }
+    .tl-item::before {
+      content: ""; position: absolute; left: -5px; top: 22px; width: 12px; height: 12px; border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%, #fff, #fff 20%, var(--accent) 21%, var(--accent2) 100%);
+      border: 2px solid var(--surface);
+    }
+    .role { display:flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+    .role h3 { margin: 0; font-size: 18px; }
+    .role .org { color: var(--muted); font-weight: 600; }
+    .role .meta { color: var(--muted); font-size: 13px; }
+    .bullets { margin: 10px 0 0 0; padding-left: 16px; }
+    .bullets li { margin: 6px 0; }
+
+    /* Projects */
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .grid.cols-2 { grid-template-columns: 1fr; } }
+    .proj {
+      position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(109,94,252,.06), rgba(45,212,191,.06)), var(--surface);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .proj:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+    .proj .pinner { padding: 18px; }
+    .tags { display:flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+    .tag { font-size: 12px; padding: 6px 8px; background: rgba(255,255,255,.06); border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+    .proj .more { display:inline-flex; align-items:center; gap:8px; color:#fff; background: linear-gradient(135deg, var(--accent), var(--accent2)); padding: 8px 12px; border-radius: 10px; border: 0; }
+
+    /* Skills */
+    .filters { display:flex; gap:8px; flex-wrap: wrap; }
+    .filter { padding: 8px 12px; border:1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); cursor: pointer; }
+    .filter.active { color: var(--text); background: rgba(109,94,252,.15); border-color: transparent; }
+    .skills-cloud { display:flex; gap:10px; flex-wrap: wrap; margin-top: 12px; }
+    .skill { padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
+    .skill[data-hide="true"] { display: none; }
+
+    /* Cards general */
+    .section-card { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+
+    /* Contact */
+    .contact-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-item { display:flex; gap: 10px; align-items: center; padding: 14px; border-radius: 12px; border: 1px dashed var(--line); background: var(--elev); }
+    .contact-item a { color: var(--text); }
+    .socials { display:flex; gap: 10px; }
+    .socials a { display:inline-flex; align-items:center; gap: 8px; padding: 8px 12px; border:1px solid var(--line); border-radius: 10px; color: var(--muted); background: var(--surface); }
+    .socials a:hover { color: var(--text); background: rgba(109,94,252,.12); }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    footer { padding: 30px 0 60px; color: var(--muted); }
+    .small { font-size: 13px; color: var(--muted); }
+
+    /* Focus styles */
+    :focus-visible { outline: none; box-shadow: var(--ring); border-radius: 10px; }
+
+    /* Accessible modals (HTML <dialog>) */
+dialog.modal {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100dvh - 80px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+dialog.modal::backdrop {
+  background: rgba(10, 15, 25, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 18px; border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+}
+.modal-title { margin: 0; font-size: 18px; font-family: Sora, Inter; }
+.modal-body { padding: 16px 18px; overflow: auto; max-height: calc(100dvh - 160px); }
+.modal-body .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 700px) { .modal-body .grid-2 { grid-template-columns: 1fr; } }
+.modal-footer {
+  padding: 12px 18px; border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: flex-end; gap: 8px;
+}
+.modal-close {
+  border: 1px solid var(--line); background: var(--elev); color: var(--text);
+  padding: 8px 12px; border-radius: 10px; cursor: pointer;
+}
+.modal-close:hover { background: rgba(109,94,252,.12); }
+.klist { margin: 10px 0; padding-left: 18px; }
+.klist li { margin: 6px 0; }
+.meta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.meta-chip { font-size: 12px; padding: 6px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); background: rgba(255,255,255,.04); }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 999px; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent2)); }
+
+:root { --danger: #ef4444; }
+
+/* Form styles */
+.form { display: grid; gap: 12px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 14px; color: var(--muted); font-weight: 600; }
+.field input, .field textarea {
+  width: 100%; padding: 12px 12px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--elev); color: var(--text);
+}
+.field input:focus, .field textarea:focus { box-shadow: var(--ring); outline: none; }
+.field .inline-error { display: none; font-size: 12px; color: var(--danger); }
+.field[aria-invalid="true"] .inline-error { display: block; }
+.form-actions { display: flex; align-items: center; gap: 10px; }
+
+.btn[disabled] { opacity: .65; cursor: not-allowed; }
+.spinner {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.35); border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.alert {
+  margin-top: 10px; padding: 10px 12px; border-radius: 10px; font-size: 14px;
+  background: rgba(45,212,191,.10); border: 1px solid var(--line); color: var(--text);
+}
+.alert.success { background: rgba(34,197,94,.12); border-color: rgba(34,197,94,.4); }
+.alert.error { background: rgba(239,68,68,.12); border-color: rgba(239,68,68,.4); }
+
+/* Honeypot (off-screen but visible to bots) */
+.hp { position: absolute; left: -5000px; opacity: 0; }
+
+/* Availability pill */
+.chip.status { background: rgba(34,197,94,.15); }
+.chip.status .dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--success);
+  box-shadow: 0 0 0 3px rgba(34,197,94,.25);
+}
+.chip.status.busy { background: rgba(239,68,68,.12); }
+.chip.status.busy .dot { background: var(--danger); box-shadow: 0 0 0 3px rgba(239,68,68,.2); }
+
+/* Proficiency progress bars */
+.pro-card h3 { margin: 0 0 8px; }
+.sort-actions { display:flex; gap:8px; align-items:center; justify-content:flex-end; }
+.sort-actions .filter { padding: 6px 10px; font-size: 13px; }
+
+.pro-list { display: grid; gap: 12px; margin-top: 10px; }
+.pro-item { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; align-items: center; }
+.pro-name { font-weight: 600; }
+.pro-val { color: var(--muted); font-size: 13px; }
+.pro-bar {
+  grid-column: 1 / -1; height: 10px; border-radius: 999px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--elev); position: relative;
+}
+.pro-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width 900ms cubic-bezier(.22,.61,.36,1);
+}
+.pro-item[data-animated="true"] .pro-fill { will-change: width; }
+  </style>
+
+  <!-- Chart.js for skills radar -->
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mahmuda Ferdus",
+    "jobTitle": "SQA Engineer",
+    "email": "mailto:mahmuda35-2382@diu.edu.bd",
+    "telephone": "+8801823653263",
+    "sameAs": [
+      "https://www.linkedin.com/in/mahmuda-ferdus-swe",
+      "https://github.com/MahmudaFerdusMim"
+    ],
+    "worksFor": { "@type": "Organization", "name": "Interlink Techsoft Limited" }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">MF</div>
+        <div class="title">
+          <strong>Mahmuda Ferdus</strong>
+          <small>SQA Engineer</small>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="btn" id="themeToggle" aria-label="Toggle color theme">🌓</button>
+        <a class="btn primary" href="#contact">Hire me</a>
+        <a class="btn" href="assets/Mahmuda_Ferdus_SQA_Resume.pdf" download>⬇️ Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-wrap">
+        <div class="card intro reveal">
+          <div class="eyebrow">SQA • Manual • Automation • Agile</div>
+          <h1>Hi, I’m <span style="background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Mahmuda Ferdus</span></h1>
+          <div class="subtitle">Software Quality Assurance engineer focused on shipping reliable, accessible, and high‑quality software across web and mobile.</div>
+          <span class="chip status" id="availability"><span class="dot"></span> Available for work</span>
+
+          <div class="contact-quick">
+            <a class="chip" href="tel:+8801823653263">📞 +880 1823 653 263</a>
+            <a class="chip" href="mailto:mahmuda35-2382@diu.edu.bd">✉️ mahmuda35-2382@diu.edu.bd</a>
+            <a class="chip" href="https://www.linkedin.com/in/mahmuda-ferdus-swe" target="_blank" rel="noopener">in / mahmuda-ferdus-swe</a>
+            <a class="chip" href="https://github.com/MahmudaFerdusMim" target="_blank" rel="noopener">🐙 GitHub</a>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">See projects</a>
+            <a class="btn" href="#experience">View experience</a>
+            <a class="btn" href="assets/Mahmuda_Ferdus_SQA_Resume.pdf" download>⬇️ Download Resume</a>
+          </div>
+        </div>
+
+        <div class="card objective reveal" aria-labelledby="about">
+          <div class="eyebrow">Career Objective</div>
+          <p id="about">
+            To apply my <strong>software quality assurance</strong> expertise across manual and automation testing, API and performance testing, and Agile collaboration to deliver <strong>high‑quality software</strong>. I aim to continuously improve testing processes and methodologies while contributing effectively to the success of every project.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="container">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Visually tracked with a clean, scroll-revealed timeline.</p>
+      </div>
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <div class="role">
+            <h3>SQA Engineer</h3>
+            <span class="org">• Interlink Techsoft Limited</span>
+            <span class="meta">— Jul 2024 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li><strong>Key projects:</strong> Library Management System (Bangla Academy & all District Public Libraries), Document Management System, User Management System, E‑Book & E‑Clipping Management, ID Card Management, Bag Management, Visitor Management.</li>
+          </ul>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="role">
+            <h3>SQA Engineer</h3>
+            <span class="org">• TNC Global Limited (SaaS ERP)</span>
+            <span class="meta">— Apr 2024 – Jun 2024</span>
+          </div>
+          <ul class="bullets">
+            <li>Tested API, web app, and mobile (Android/iOS) in parallel for upcoming SaaS.</li>
+            <li>Actively participated in Agile ceremonies with cross‑functional teams.</li>
+            <li>Guided junior members to complete assigned tasks.</li>
+          </ul>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="role">
+            <h3>Jr. SQA Engineer</h3>
+            <span class="org">• Beacontech Limited</span>
+            <span class="meta">— Mar 2023 – Mar 2024</span>
+          </div>
+          <ul class="bullets">
+            <li><strong>Beacon ERP:</strong> Merchandising, Procurement, Store, Production, Planning, Shipment modules.</li>
+            <li>Collaborated with developers on new features, improvements, and bug fixes.</li>
+            <li>Maintained defect lifecycle; performed UAT and GUI testing.</li>
+            <li>Conducted user manual sessions, continuous customer support, and client implementations.</li>
+          </ul>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="role">
+            <h3>Trainee SQA Engineer</h3>
+            <span class="org">• Beacontech Limited</span>
+            <span class="meta">— Dec 2022 – Feb 2023</span>
+          </div>
+          <ul class="bullets">
+            <li><strong>Beacon ERP:</strong> HRMS & Payroll modules.</li>
+            <li>Requirement analysis, test case design, and manual testing.</li>
+            <li>Bug reporting & tracking using Trello; regression testing.</li>
+            <li>Helped stabilize HRMS & Payroll by surfacing issues early in the SDLC.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container">
+  <div class="section-head">
+    <h2>Highlighted Projects</h2>
+    <p>Hover cards include micro-interactions; open details for scope and responsibilities.</p>
+  </div>
+
+  <div class="grid cols-2">
+    <article class="proj reveal">
+      <div class="pinner">
+        <h3>Library Management System</h3>
+        <p class="small">Bangla Academy & District Public Libraries</p>
+        <div class="tags">
+          <span class="tag">Manual & Automation</span>
+          <span class="tag">UAT</span>
+          <span class="tag">API Testing</span>
+          <span class="tag">Regression</span>
+        </div>
+        <p>End‑to‑end testing for catalog, circulation, membership, and reporting workflows with cross‑browser coverage and release validation.</p>
+        <button class="more" data-modal="modal-lms" aria-label="Open Library Management System case study">View details →</button>
+      </div>
+    </article>
+
+    <article class="proj reveal">
+      <div class="pinner">
+        <h3>Document Management System</h3>
+        <p class="small">Enterprise document lifecycle</p>
+        <div class="tags">
+          <span class="tag">API</span>
+          <span class="tag">GUI</span>
+          <span class="tag">Performance</span>
+          <span class="tag">Security (basic)</span>
+        </div>
+        <p>Coverage across upload, indexing, search, approvals, and audit trails. Designed regression suites and API collections for critical flows.</p>
+        <button class="more" data-modal="modal-dms" aria-label="Open Document Management System case study">View details →</button>
+      </div>
+    </article>
+
+    <article class="proj reveal">
+      <div class="pinner">
+        <h3>User & Access Management</h3>
+        <p class="small">RBAC, roles, permissions</p>
+        <div class="tags">
+          <span class="tag">RBAC</span>
+          <span class="tag">Boundary Cases</span>
+          <span class="tag">Negative Tests</span>
+        </div>
+        <p>Validated role hierarchies and permission matrices; focused on security-sensitive edge cases and session handling.</p>
+        <button class="more" data-modal="modal-rbac" aria-label="Open User & Access Management case study">View details →</button>
+      </div>
+    </article>
+
+    <article class="proj reveal">
+      <div class="pinner">
+        <h3>E‑Book & E‑Clipping</h3>
+        <p class="small">Content ingestion & discovery</p>
+        <div class="tags">
+          <span class="tag">Usability</span>
+          <span class="tag">Cross‑device</span>
+          <span class="tag">Accessibility</span>
+        </div>
+        <p>Functional and UI/UX testing across content ingestion, search, and preview with responsive audits.</p>
+        <button class="more" data-modal="modal-ebook" aria-label="Open E‑Book & E‑Clipping case study">View details →</button>
+      </div>
+    </article>
+  </div>
+</section>
+    <!-- Skills -->
+    <section id="skills" class="container">
+      <div class="section-head">
+        <h2>Skills & Tools</h2>
+        <p>Filter by category or view the radar chart.</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="section-card reveal">
+          <div class="filters" id="skillFilters" role="tablist" aria-label="Skill filters">
+            <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" data-filter="testing" role="tab">Testing</button>
+            <button class="filter" data-filter="automation" role="tab">Automation</button>
+            <button class="filter" data-filter="api" role="tab">API</button>
+            <button class="filter" data-filter="performance" role="tab">Performance</button>
+            <button class="filter" data-filter="tools" role="tab">Tools</button>
+            <button class="filter" data-filter="languages" role="tab">Languages</button>
+            <button class="filter" data-filter="db" role="tab">Databases</button>
+            <button class="filter" data-filter="vcs" role="tab">Version Control</button>
+          </div>
+
+          <div class="skills-cloud" id="skillsCloud" aria-live="polite">
+            <span class="skill" data-cat="testing">Manual Testing</span>
+            <span class="skill" data-cat="automation">Automation Testing</span>
+            <span class="skill" data-cat="api">API Testing</span>
+            <span class="skill" data-cat="performance">Performance Testing</span>
+            <span class="skill" data-cat="performance">Load Testing</span>
+
+            <span class="skill" data-cat="tools">Selenium</span>
+            <span class="skill" data-cat="tools">JMeter</span>
+            <span class="skill" data-cat="tools api">Postman</span>
+            <span class="skill" data-cat="tools">IntelliJ IDEA</span>
+            <span class="skill" data-cat="tools">Trello</span>
+            <span class="skill" data-cat="tools">Slack</span>
+
+            <span class="skill" data-cat="vcs">GitHub</span>
+            <span class="skill" data-cat="vcs">GitLab</span>
+
+            <span class="skill" data-cat="languages">Java</span>
+            <span class="skill" data-cat="languages">C</span>
+
+            <span class="skill" data-cat="db">MS SQL Server</span>
+            <span class="skill" data-cat="db">MySQL</span>
+
+            <span class="skill" data-cat="testing">GUI Testing</span>
+            <span class="skill" data-cat="testing">UAT</span>
+            <span class="skill" data-cat="testing">Regression</span>
+            <span class="skill" data-cat="testing">Defect Lifecycle</span>
+            <span class="skill" data-cat="testing">Agile Collaboration</span>
+          </div>
+        </div>
+
+        <div class="section-card reveal">
+          <canvas id="skillsChart" height="240" aria-label="Skill radar chart" role="img"></canvas>
+          <p class="small" style="margin-top:8px;">Tip: Values are illustrative — adjust in JS as you prefer.</p>
+        </div>
+        <div class="section-card pro-card reveal" id="skillsProficiency">
+  <div style="display:flex; align-items:end; justify-content:space-between; gap:12px;">
+    <div>
+      <h3>Proficiency levels</h3>
+      <p class="small" style="margin:4px 0 0;">Values are indicative; adjust anytime.</p>
+    </div>
+    <div class="sort-actions">
+      <button class="filter" id="sortStrengthBtn" aria-pressed="false">Sort by strength</button>
+    </div>
+  </div>
+
+  <div class="pro-list" id="proList">
+    <div class="pro-item" data-percent="88">
+      <div class="pro-name">Manual Testing</div>
+      <div class="pro-val">88%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="72">
+      <div class="pro-name">Automation (Selenium + Java)</div>
+      <div class="pro-val">72%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="78">
+      <div class="pro-name">API Testing (Postman)</div>
+      <div class="pro-val">78%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="66">
+      <div class="pro-name">Performance & Load (JMeter)</div>
+      <div class="pro-val">66%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="72">
+      <div class="pro-name">SQL (MS SQL / MySQL)</div>
+      <div class="pro-val">72%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="80">
+      <div class="pro-name">Version Control (Git)</div>
+      <div class="pro-val">80%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="82">
+      <div class="pro-name">Web & Mobile Testing</div>
+      <div class="pro-val">82%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="86">
+      <div class="pro-name">Agile Collaboration</div>
+      <div class="pro-val">86%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+    <div class="pro-item" data-percent="83">
+      <div class="pro-name">Documentation & UAT</div>
+      <div class="pro-val">83%</div>
+      <div class="pro-bar"><span class="pro-fill" aria-hidden="true"></span></div>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="container">
+      <div class="section-head">
+        <h2>Education</h2>
+        <p>Credentials & academic performance.</p>
+      </div>
+      <div class="grid cols-2">
+        <div class="section-card reveal">
+          <h3>Daffodil International University</h3>
+          <p class="small">B.Sc. in Software Engineering</p>
+          <ul class="bullets">
+            <li>Passing Year: 2022</li>
+            <li>CGPA: 3.82 / 4.00</li>
+          </ul>
+        </div>
+        <div class="section-card reveal">
+          <h3>Govt. Ashek Mahmud College</h3>
+          <p class="small">Higher Secondary School Certificate</p>
+          <ul class="bullets">
+            <li>Passing Year: 2016</li>
+            <li>GPA: 5.00 / 5.00</li>
+          </ul>
+        </div>
+        <div class="section-card reveal">
+          <h3>Hashil Girls High School</h3>
+          <p class="small">Secondary School Certificate</p>
+          <ul class="bullets">
+            <li>Passing Year: 2014</li>
+            <li>GPA: 5.00 / 5.00</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training & Certifications -->
+    <section id="training" class="container">
+      <div class="section-head">
+        <h2>Training & Certifications</h2>
+      </div>
+      <div class="grid cols-2">
+        <div class="section-card reveal">
+          <h3>SQA and Cyber Security Professional Training</h3>
+          <p class="small">IT Training BD — 15th Batch</p>
+          <p>Certificate</p>
+        </div>
+        <div class="section-card reveal">
+          <h3>Introduction to Software Testing</h3>
+          <p class="small">Coursera — University of Minnesota</p>
+          <p>Certificate</p>
+        </div>
+        <div class="section-card reveal">
+          <h3>Software Architecture and Design</h3>
+          <p class="small">Coursera — University of Alberta</p>
+          <p>Certificate</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Let’s collaborate.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item reveal">
+          <span>📞</span>
+          <a href="tel:+8801823653263">+880 1823 653 263</a>
+          <button class="btn" id="copyPhone" style="margin-left:auto">Copy</button>
+        </div>
+        <div class="contact-item reveal">
+          <span>✉️</span>
+          <a href="mailto:mahmuda35-2382@diu.edu.bd">mahmuda35-2382@diu.edu.bd</a>
+          <button class="btn" id="copyEmail" style="margin-left:auto">Copy</button>
+        </div>
+      </div>
+      <div class="section-card reveal" style="margin-top:12px;">
+  <h3 style="margin-top:0;">Send a message</h3>
+  <form id="contactForm" class="form" data-formspree-id="YOUR_FORM_ID" novalidate>
+    <div class="hp">
+      <label>Leave this field empty</label>
+      <input type="text" name="_hp" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <div class="field" id="f-name">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+      <div class="inline-error">Please enter your name.</div>
+    </div>
+
+    <div class="field" id="f-email">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required />
+      <div class="inline-error">Please enter a valid email.</div>
+    </div>
+
+    <div class="field" id="f-subject">
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" placeholder="Project inquiry" required />
+      <div class="inline-error">Please add a subject.</div>
+    </div>
+
+    <div class="field" id="f-message">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+      <div class="inline-error">Please enter a message.</div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn primary" id="submitBtn">
+        <span class="btn-label">Send</span>
+      </button>
+      <div id="formStatus" class="alert" role="status" aria-live="polite" style="display:none;"></div>
+    </div>
+  </form>
+</div>
+      <div class="section-card reveal" style="margin-top:12px;">
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/mahmuda-ferdus-swe" target="_blank" rel="noopener" aria-label="LinkedIn">in LinkedIn</a>
+          <a href="https://github.com/MahmudaFerdusMim" target="_blank" rel="noopener" aria-label="GitHub">🐙 GitHub</a>
+        </div>
+        <p class="small" style="margin-top:12px;">
+          Reference: Ehsanul Alam Sabbir — Software Engineer (QA) at Cefalo Bangladesh Ltd, Trainer at IT Training BD. Cell: +8801670102216, Email: <a href="mailto:easabbir@gmail.com">easabbir@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="small">© <span id="year"></span> Mahmuda Ferdus. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Theme toggle with localStorage + themechange event
+(function() {
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
+  const emit = () => window.dispatchEvent(new Event('themechange'));
+  emit(); // fire once on load so consumers can apply theme-aware styles
+  btn?.addEventListener('click', () => {
+    const now = root.getAttribute('data-theme') === 'light' ? '' : 'light';
+    if (now) root.setAttribute('data-theme', now); else root.removeAttribute('data-theme');
+    localStorage.setItem('theme', now || '');
+    emit();
+  });
+})();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Scrollspy
+    const navLinks = Array.from(document.querySelectorAll('nav a'));
+    const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const spy = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         const idx = sections.indexOf(entry.target);
+         if (entry.isIntersecting) {
+           navLinks.forEach(n => n.classList.remove('active'));
+           if (navLinks[idx]) navLinks[idx].classList.add('active');
+         }
+       });
+    }, { rootMargin: '-50% 0px -40% 0px', threshold: 0.01 });
+    sections.forEach(s => spy.observe(s));
+
+    // Copy contact buttons
+    const copy = (text) => navigator.clipboard.writeText(text);
+    document.getElementById('copyPhone')?.addEventListener('click', () => copy('+8801823653263'));
+    document.getElementById('copyEmail')?.addEventListener('click', () => copy('mahmuda35-2382@diu.edu.bd'));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Skills filter
+    const filters = document.getElementById('skillFilters');
+    const skills = Array.from(document.querySelectorAll('#skillsCloud .skill'));
+    filters?.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter'); if (!btn) return;
+      filters.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      skills.forEach(s => {
+        s.dataset.hide = f === 'all' ? 'false' : (s.dataset.cat.includes(f) ? 'false' : 'true');
+      });
+    });
+
+    // Project modals (native <dialog>)
+document.querySelectorAll('button.more[data-modal]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.getAttribute('data-modal');
+    const dlg = document.getElementById(id);
+    if (dlg?.showModal) dlg.showModal();
+  });
+});
+document.querySelectorAll('dialog.modal [data-close]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const dlg = btn.closest('dialog');
+    dlg?.close();
+  });
+});
+// Close on backdrop click for dialogs
+document.querySelectorAll('dialog.modal').forEach(dlg => {
+  dlg.addEventListener('click', (e) => {
+    const rect = dlg.getBoundingClientRect();
+    const inDialog = rect.top <= e.clientY && e.clientY <= rect.bottom && rect.left <= e.clientX && e.clientX <= rect.right;
+    if (!inDialog) dlg.close();
+  });
+});
+
+// Contact form handling (Formspree, no backend)
+(function () {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const statusEl = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+  const labelEl = submitBtn?.querySelector('.btn-label');
+
+  const setStatus = (type, msg) => {
+    if (!statusEl) return;
+    statusEl.className = 'alert ' + (type || '');
+    statusEl.style.display = 'block';
+    statusEl.textContent = msg;
+  };
+
+  const setLoading = (loading) => {
+    if (!submitBtn || !labelEl) return;
+    submitBtn.disabled = loading;
+    labelEl.innerHTML = loading ? '<span class="spinner" aria-hidden="true"></span> Sending…' : 'Send';
+  };
+
+  // Proficiency bars: animate on reveal + sort by strength
+(function () {
+  const list = document.getElementById('proList');
+  const btn = document.getElementById('sortStrengthBtn');
+  if (!list || !btn) return;
+
+  const items = Array.from(list.querySelectorAll('.pro-item'));
+  items.forEach((it, idx) => it.dataset.index = String(idx));
+
+  // Animate width when visible
+  const animateItem = (el) => {
+    if (el.dataset.animated === 'true') return;
+    const percent = Number(el.dataset.percent || 0);
+    const fill = el.querySelector('.pro-fill');
+    if (fill) {
+      requestAnimationFrame(() => { fill.style.width = percent + '%'; });
+      el.dataset.animated = 'true';
+    }
+  };
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { animateItem(e.target); obs.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  items.forEach(it => obs.observe(it));
+
+  // Sorting toggle
+  let sorted = false;
+  btn.addEventListener('click', () => {
+    sorted = !sorted;
+    btn.setAttribute('aria-pressed', String(sorted));
+    btn.classList.toggle('active', sorted);
+    btn.textContent = sorted ? 'Sorted by strength' : 'Sort by strength';
+
+    const toRender = [...items].sort((a, b) => {
+      if (sorted) return Number(b.dataset.percent) - Number(a.dataset.percent);
+      return Number(a.dataset.index) - Number(b.dataset.index);
+    });
+    toRender.forEach(i => list.appendChild(i));
+  });
+})();
+
+  // Simple field validity UI
+  const fields = ['name','email','subject','message'].map(id => document.getElementById(id));
+  fields.forEach((el) => {
+    el?.addEventListener('input', () => {
+      const fieldWrap = el.closest('.field');
+      if (!fieldWrap) return;
+      fieldWrap.setAttribute('aria-invalid', el.checkValidity() ? 'false' : 'true');
+    });
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    setStatus('', '');
+    statusEl.style.display = 'none';
+
+    // honeypot
+    const hp = form.querySelector('[name="_hp"]');
+    if (hp && hp.value) return; // silently drop
+
+    // Validate
+    if (!form.reportValidity()) {
+      fields.forEach(el => {
+        const wrap = el.closest('.field');
+        wrap?.setAttribute('aria-invalid', el.checkValidity() ? 'false' : 'true');
+      });
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const id = form.dataset.formspreeId || '';
+      if (id && id !== 'YOUR_FORM_ID') {
+        const resp = await fetch(`https://formspree.io/f/${id}`, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (resp.ok) {
+          setStatus('success', 'Thanks! Your message has been sent. I will get back to you shortly.');
+          form.reset();
+          fields.forEach(el => el.closest('.field')?.setAttribute('aria-invalid', 'false'));
+        } else {
+          setStatus('error', 'Sorry, something went wrong. Please try again or email me directly.');
+        }
+      } else {
+        // Fallback: open mailto
+        const name = encodeURIComponent(document.getElementById('name').value);
+        const email = encodeURIComponent(document.getElementById('email').value);
+        const subject = encodeURIComponent(document.getElementById('subject').value);
+        const message = encodeURIComponent(document.getElementById('message').value + `\n\nFrom: ${name} <${email}>`);
+        window.location.href = `mailto:mahmuda35-2382@diu.edu.bd?subject=${subject}&body=${message}`;
+      }
+    } catch (err) {
+      setStatus('error', 'Network error. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  });
+})();
+
+// Availability badge + secret toggle (Alt + A)
+(function () {
+  const badge = document.getElementById('availability');
+  if (!badge) return;
+  const set = (state) => {
+    const busy = state !== 'open';
+    badge.classList.toggle('busy', busy);
+    badge.innerHTML = `<span class="dot"></span> ${busy ? 'Not currently available' : 'Available for work'}`;
+  };
+  const saved = localStorage.getItem('availability') || 'open';
+  set(saved);
+  window.addEventListener('keydown', (e) => {
+    if (e.altKey && (e.key === 'a' || e.key === 'A')) {
+      const next = (localStorage.getItem('availability') || 'open') === 'open' ? 'closed' : 'open';
+      localStorage.setItem('availability', next);
+      set(next);
+    }
+  });
+})();
+
+    // Theme-aware Skills Radar (Chart.js)
+let skillsChart;
+function cssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+function hexToRgba(hex, alpha) {
+  const h = hex.replace('#','');
+  const b = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+  const num = parseInt(b, 16);
+  const r = (num >> 16) & 255, g = (num >> 8) & 255, bl = num & 255;
+  return `rgba(${r}, ${g}, ${bl}, ${alpha})`;
+}
+function buildSkillsChart() {
+  const ctx = document.getElementById('skillsChart');
+  if (!ctx || !window.Chart) return;
+  const accent = cssVar('--accent') || '#6d5efc';
+  const accent2 = cssVar('--accent2') || '#2dd4bf';
+  const muted = cssVar('--muted') || '#9aa6c3';
+
+  const data = {
+    labels: [
+      'Manual Testing','Automation (Selenium+Java)','API (Postman)',
+      'Performance/Load (JMeter)','SQL (MS SQL/MySQL)','Version Control (Git)',
+      'Mobile & Web','Agile/Collab','Documentation/UAT'
+    ],
+    datasets: [{
+      label: 'Proficiency',
+      data: [88, 72, 78, 66, 72, 80, 82, 86, 83],
+      backgroundColor: hexToRgba(accent, 0.20),
+      borderColor: accent,
+      pointBackgroundColor: accent2,
+      pointBorderColor: '#ffffff',
+      pointHoverBackgroundColor: '#ffffff',
+      pointHoverBorderColor: accent2,
+      borderWidth: 2
+    }]
+  };
+
+  const options = {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      r: {
+        angleLines: { color: 'rgba(154,166,195,.25)' },
+        grid: { color: 'rgba(154,166,195,.25)' },
+        pointLabels: { color: muted, font: { size: 12 } },
+        suggestedMin: 0, suggestedMax: 100,
+        ticks: { display: false }
+      }
+    }
+  };
+
+  if (skillsChart) {
+    skillsChart.data = data;
+    skillsChart.options = options;
+    skillsChart.update();
+  } else {
+    skillsChart = new Chart(ctx, { type: 'radar', data, options });
+  }
+}
+document.addEventListener('DOMContentLoaded', buildSkillsChart);
+window.addEventListener('themechange', buildSkillsChart);
+  </script>
+  <!-- Project Case Study Modals -->
+<dialog id="modal-lms" class="modal" aria-labelledby="lmsTitle" aria-describedby="lmsDesc">
+  <div class="modal-header">
+    <h3 id="lmsTitle" class="modal-title">Library Management System — Case Study</h3>
+    <button class="modal-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="modal-body" id="lmsDesc">
+    <span class="badge">Interlink Techsoft Limited</span>
+    <div class="meta-row">
+      <span class="meta-chip">Web</span>
+      <span class="meta-chip">Cross‑browser</span>
+      <span class="meta-chip">Agile</span>
+    </div>
+    <h4>Scope</h4>
+    <ul class="klist">
+      <li>Cataloging, circulation, membership, fines, and reporting workflows.</li>
+      <li>Multi‑role access: librarian, admin, member; data integrity across modules.</li>
+      <li>Release regression and UAT sign‑off with stakeholders.</li>
+    </ul>
+    <h4>Responsibilities</h4>
+    <ul class="klist">
+      <li>Requirement analysis; designed test scenarios and cases for core flows.</li>
+      <li>Manual execution and selective automation for regression‑prone paths.</li>
+      <li>API testing for search, user, and circulation endpoints (collections & environments).</li>
+      <li>Defect lifecycle ownership and cross‑team triage.</li>
+    </ul>
+    <h4>Tooling</h4>
+    <div class="meta-row">
+      <span class="meta-chip">Selenium (Java)</span>
+      <span class="meta-chip">Postman</span>
+      <span class="meta-chip">JMeter</span>
+      <span class="meta-chip">GitHub/GitLab</span>
+      <span class="meta-chip">MS SQL / MySQL</span>
+    </div>
+    <h4>Focus areas</h4>
+    <ul class="klist">
+      <li>Boundary and negative scenarios around membership limits and circulation rules.</li>
+      <li>Data consistency across modules and reports.</li>
+      <li>Cross‑browser and responsive coverage for critical pages.</li>
+    </ul>
+    <h4>Outcome</h4>
+    <p class="small">Improved stability of core circulation and reporting flows, streamlined UAT, and reduced regressions on recurring releases.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-close" data-close>Close</button>
+  </div>
+</dialog>
+
+<dialog id="modal-dms" class="modal" aria-labelledby="dmsTitle" aria-describedby="dmsDesc">
+  <div class="modal-header">
+    <h3 id="dmsTitle" class="modal-title">Document Management System — Case Study</h3>
+    <button class="modal-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="modal-body" id="dmsDesc">
+    <span class="badge">Interlink Techsoft Limited</span>
+    <div class="meta-row">
+      <span class="meta-chip">Web</span>
+      <span class="meta-chip">API‑first</span>
+      <span class="meta-chip">Audit & review</span>
+    </div>
+    <h4>Scope</h4>
+    <ul class="klist">
+      <li>Document upload, versioning, indexing, search, approvals, and audit trails.</li>
+      <li>Permission checks and data retention behaviors.</li>
+    </ul>
+    <h4>Responsibilities</h4>
+    <ul class="klist">
+      <li>Designed regression test suites for critical user journeys.</li>
+      <li>Built API collections for CRUD, search, and approval flows.</li>
+      <li>Functional and GUI testing with focus on table/list views and filters.</li>
+      <li>Basic performance checks on batch uploads and search endpoints.</li>
+    </ul>
+    <h4>Tooling</h4>
+    <div class="meta-row">
+      <span class="meta-chip">Postman</span>
+      <span class="meta-chip">Selenium (Java)</span>
+      <span class="meta-chip">JMeter</span>
+      <span class="meta-chip">Trello</span>
+    </div>
+    <h4>Outcome</h4>
+    <p class="small">Reliable releases across document lifecycle, clearer coverage via API suites, and fewer production regressions in approval/search flows.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-close" data-close>Close</button>
+  </div>
+</dialog>
+
+<dialog id="modal-rbac" class="modal" aria-labelledby="rbacTitle" aria-describedby="rbacDesc">
+  <div class="modal-header">
+    <h3 id="rbacTitle" class="modal-title">User & Access Management — Case Study</h3>
+    <button class="modal-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="modal-body" id="rbacDesc">
+    <span class="badge">Interlink Techsoft Limited</span>
+    <div class="meta-row">
+      <span class="meta-chip">RBAC</span>
+      <span class="meta-chip">Security‑sensitive</span>
+      <span class="meta-chip">Session & auth</span>
+    </div>
+    <h4>Scope</h4>
+    <ul class="klist">
+      <li>Role hierarchy, permission matrices, and session handling.</li>
+      <li>Password policies, lockouts, and account lifecycle behaviors.</li>
+    </ul>
+    <h4>Responsibilities</h4>
+    <ul class="klist">
+      <li>Created negative test suites for privilege escalation and access leakage.</li>
+      <li>Boundary testing around roles/permissions and state transitions.</li>
+      <li>Collaborated with developers on edge cases and secure defaults.</li>
+    </ul>
+    <h4>Outcome</h4>
+    <p class="small">More predictable permissioning, fewer access-related defects, and clearer documentation for role-based testing.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-close" data-close>Close</button>
+  </div>
+</dialog>
+
+<dialog id="modal-ebook" class="modal" aria-labelledby="ebookTitle" aria-describedby="ebookDesc">
+  <div class="modal-header">
+    <h3 id="ebookTitle" class="modal-title">E‑Book & E‑Clipping — Case Study</h3>
+    <button class="modal-close" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="modal-body" id="ebookDesc">
+    <span class="badge">Interlink Techsoft Limited</span>
+    <div class="meta-row">
+      <span class="meta-chip">Responsive</span>
+      <span class="meta-chip">UX</span>
+      <span class="meta-chip">Search & preview</span>
+    </div>
+    <h4>Scope</h4>
+    <ul class="klist">
+      <li>Content ingestion, metadata quality, search accuracy, and preview rendering.</li>
+      <li>Cross‑device verification (desktop, tablet, mobile) and accessibility checks.</li>
+    </ul>
+    <h4>Responsibilities</h4>
+    <ul class="klist">
+      <li>Usability reviews and visual consistency checks.</li>
+      <li>Responsive audits across common device viewports.</li>
+      <li>Exploratory testing on search facets and preview edge cases.</li>
+    </ul>
+    <h4>Outcome</h4>
+    <p class="small">Improved user discoverability and consistent previews across devices and breakpoints.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-close" data-close>Close</button>
+  </div>
+</dialog>
+</body>
+</html>
